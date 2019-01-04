@@ -39,7 +39,7 @@ ul:last-child {
 .title--big::after {
     content: '';
     margin: 1rem 0 0 0;
-    background-color: #1539CF;
+    background-color: #fff;
     display: block;
     width: 100%;
     height: .3rem;
