@@ -98,6 +98,24 @@
     background-color: transparent; /* 1 */
     text-decoration: none; /* 2 */
   }
+
+  /**
+   * Remove focus rectangle on links in all browsers
+   */
+
+  a:focus {
+    outline: none;
+  }
+
+  /**
+   * Remove color change on links in all browsers
+   */
+
+   a:focus,
+   a:visited,
+   a:active {
+     text-decoration: none;
+   }
   
   /**
    * 1. Remove the bottom border in Chrome 57-
@@ -110,9 +128,7 @@
     text-decoration: underline dotted; /* 2 */
   }
   
-  /**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
+  
   
   b,
   strong {
