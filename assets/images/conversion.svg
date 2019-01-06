@@ -1,13 +1,1 @@
-<svg width="337" height="190" viewBox="0 0 337 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="337" height="190" fill="#E5E5E5"/>
-<rect width="337" height="190" fill="#1539CF"/>
-<rect x="8" y="7" width="24" height="8" fill="#0D2DB5"/>
-<rect x="305" y="7" width="24" height="8" fill="#0D2DB5"/>
-<rect x="271" y="7" width="24" height="8" fill="#0D2DB5"/>
-<rect x="237" y="7" width="24" height="8" fill="#0D2DB5"/>
-<rect x="203" y="7" width="24" height="8" fill="#0D2DB5"/>
-<rect x="114" y="74" width="110" height="10" fill="#0D2DB5"/>
-<rect x="101" y="90" width="136" height="10" fill="#0D2DB5"/>
-<rect x="104" y="106" width="130" height="10" fill="#0D2DB5"/>
-<rect x="149" y="162" width="40" height="10" fill="white"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 350 190" viewBox="0 0 350 190"><path fill="#1539cf" d="M6 0h337v190H6z"/><path d="M14 7h24v8H14zM311 7h24v8h-24zM277 7h24v8h-24zM243 7h24v8h-24zM209 7h24v8h-24zM120 74h110v10H120zM107 90h136v10H107zM110 106h130v10H110z"/><path fill="#fff" d="M155 162h40v10h-40z"/></svg>

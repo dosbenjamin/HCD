@@ -55,6 +55,7 @@ ul:last-child {
     font-size: 1.2em;
     text-align: right;
     margin: 0 0 4em 0;
+    color: #000;
 }
 .title--big {
     text-align: inherit;
@@ -114,8 +115,8 @@ ul:last-child {
 }
 .section--black .link:visited,
 .section--blue .link:visited,
-.section--black *,
-.section--blue * {
+.section--black,
+.section--blue {
     color: #fff;
 }
 .container__img {
