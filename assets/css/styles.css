@@ -1,4 +1,5 @@
 @charset "utf-8";
+/* Fonts */
 /* Global */
 html {
     font-size: 18px;
@@ -12,14 +13,12 @@ body {
     font-weight: 400;
     overflow-x: hidden;
 }
-p, ul,
-.header__texts li {
+p, ul {
     margin: 0 0 1em 0;
-    max-width: 45em;
+    /* max-width: 45em; */
 }
 p:last-child,
-ul:last-child,
-.header__texts li:last-child {
+ul:last-child {
     margin-bottom: 0;
 }
 .title {
@@ -50,18 +49,26 @@ ul:last-child,
     width: 100%;
     height: .3rem;
 }
-.list--footer .list__item,
-.tiny {
+.tiny,
+.list--uppercase .list__item {
     font-size: 0.833em;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.section__img {
-    display: block;
-    margin-top: 2em;
-    max-width: calc(100vw - 4em);
-    width: 100%;    
+.list__item {
+    margin: 0;
+}
+.list__item::before {
+    position: absolute;
+    left: -1em;
+    content: '\2013\00a0';
+}
+.list--uppercase {
+    line-height: 2.5;
+}
+.list--uppercase .list__item::before {
+    display: none;
 }
 .section {
     padding: 4em 2em;
@@ -71,10 +78,10 @@ ul:last-child,
     position: absolute;
     content: '';
     top: 0;
-    left: -100%;
+    left: 0;
     z-index: -1;
     height: 100%;
-    width: 300vw;
+    width: 100%;
 }
 .section--black::before {
     background-color: #000;
@@ -86,33 +93,36 @@ ul:last-child,
 .section--blue * {
     color: #fff;
 }
-.header{
-    padding-top: 2em;
+.container__img {
+    display: block;
+    margin: 3em auto 0 auto;
+    width: 60%;    
+}
+.container__img--smaller {
+    width: 50%;
+}
+.container__img--bigger {
+    width: 75%;
 }
 .list {
     position: relative;
 }
-.list__item::before {
-    position: absolute;
-    left: -1em;
-    content: '\2013\00a0';
-}
-.list--footer {
-    line-height: 2.5;
-}
-.list--footer .list__item::before {
-    display: none;
+/* Landing */
+.header{
+    padding-top: 2em;
 }
 @media (min-width: 640px) and (orientation: portrait){
+    /* Global */
     .title {
         font-size: 1.44em;
+        margin-bottom: 4rem;
     }
     .title--medium {
         font-size: 1.728em;
         margin: 0;
     }
     .title--big {
-        font-size: 11vw;
+        margin-bottom: 2rem;
     }
     .section {
         padding: 5em 3em;
@@ -122,34 +132,72 @@ ul:last-child,
         display: flex;
         flex-direction: column;
     }
-    .header__texts {
+    .container__img {
+        margin-top: 4em;
+        width: 45%;
+    }
+    .container__img--smaller {
+        width: 35%;
+    }
+    .container__img--bigger {
+        width: 65%;
+    }
+    /* Landing */
+    .header .container {
         margin-top: auto;
         max-width: 26em;
     }
-    .section__img {
-        margin-top: 4em;
-    }
 }
 @media (min-width: 1024px){
+    li {
+        margin-bottom: 1em;
+        max-width: 40em;
+    }
+    li:last-child {
+        margin: 0;
+    }
+    .title {
+        margin-bottom: 6rem;
+    }
     .title--big {
-        font-size: 6.192em;        ;
+        font-size: 6.192em;
     }
     .section {
-        padding: 6em 2em;
+        padding: 6em 1em;
         width: 80vw;
         max-width: 1280px;
         margin: auto;
     }
-    .header__texts {
+    .section__img {
+        max-width: 15em;
+        margin: 0;
+        width: 30em;
+    }
+    .container {
         display: flex;
-        width: 100%;
         justify-content: space-between;
-        max-width: 100%;
+        align-items: center;
+        margin: auto;
+        height: 100%;
     }
-    .header__texts li {
-        margin-right: 3em;
+    .section--reverse .container {
+        flex-direction: row-reverse;
     }
-    .header__texts li:last-of-type {
-        margin-right: 0;
+    .container__textBox {
+        display: flex;
+        max-width: 35em;
+        flex-direction: column;
+        margin: 0 3em 0 0;
+        height: fit-content;
+        justify-content: space-between;
+    }
+    .section--reverse .container__textBox {
+        margin: 0 0 0 3em;
+    }
+    .textBox__item:not(:only-child) {
+        margin-bottom: 1em;
+    }
+    .textBox__item:last-child {
+        margin-bottom: 0;
     }
 }
