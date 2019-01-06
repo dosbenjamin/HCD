@@ -67,6 +67,12 @@ ul:last-child {
 .list--uppercase .list__item::before {
     display: none;
 }
+.link {
+    font-weight: 800;
+}
+.link:visited {
+    color: black;
+}
 .section {
     padding: 4em 2em;
     position: relative;
@@ -86,6 +92,8 @@ ul:last-child {
 .section--blue::before {
     background-color: #1539CF;  
 }
+.section--black .link:visited,
+.section--blue .link:visited,
 .section--black *,
 .section--blue * {
     color: #fff;
@@ -159,6 +167,10 @@ ul:last-child {
         font-size: 1.728em;
         margin-bottom: 0;
     }
+    .link:hover {
+        color: #1539CF;
+        transition: linear .5s;
+    }
     .section {
         padding: 6em 1em;
         width: 80vw;
@@ -177,11 +189,16 @@ ul:last-child {
     .container--reverse {
         flex-direction: row-reverse;
     }
+    .container--noImage {
+        align-items: flex-end;
+    }
+    .container p {
+        max-width: 30em;
+    }
     .container > p:not(:last-child) {
         margin: 0 3em 0 0;
     }
     .container__textBox {
-        max-width: 35em;
         margin: 0 3em 0 0;
     }
     .container__img {
