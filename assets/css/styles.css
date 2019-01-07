@@ -71,6 +71,7 @@ ul:last-child {
     height: .3rem;
 }
 .link {
+    color: #fff;
     font-weight: 700;
     text-decoration-color: #fff;
 }
